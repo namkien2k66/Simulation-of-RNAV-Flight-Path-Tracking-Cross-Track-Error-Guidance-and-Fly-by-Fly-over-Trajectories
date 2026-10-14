@@ -1,0 +1,46 @@
+=== experiment 1: Leg capture from an initial cross-track offset, two guidance laws.
+   {'guidance': 'PD+FF', 'offset_m': 200, 't_capture_s': 66.2, 'overshoot_m': 0.0, 'max_bank_deg': 3.3}
+   {'guidance': 'L1', 'offset_m': 200, 't_capture_s': 19.8, 'overshoot_m': 9.7, 'max_bank_deg': 14.9}
+   {'guidance': 'PD+FF', 'offset_m': 500, 't_capture_s': 66.2, 'overshoot_m': 0.1, 'max_bank_deg': 8.2}
+   {'guidance': 'L1', 'offset_m': 500, 't_capture_s': 23.1, 'overshoot_m': 21.5, 'max_bank_deg': 24.3}
+   {'guidance': 'PD+FF', 'offset_m': 1000, 't_capture_s': 66.9, 'overshoot_m': 0.2, 'max_bank_deg': 15.7}
+   {'guidance': 'L1', 'offset_m': 1000, 't_capture_s': 28.2, 'overshoot_m': 40.3, 'max_bank_deg': 25.0}
+   {'guidance': 'PD+FF', 'offset_m': 2000, 't_capture_s': 68.4, 'overshoot_m': 0.5, 'max_bank_deg': 24.6}
+   {'guidance': 'L1', 'offset_m': 2000, 't_capture_s': 37.8, 'overshoot_m': 114.8, 'max_bank_deg': 25.0}
+=== experiment 2: Fly-by vs fly-over for several turn angles (PD+FF guidance).
+   {'delta_deg': 30, 'kind': 'flyby', 'radius_m': 4034, 'turn_xte_max_m': 17.7, 'wp_miss_m': 159.6, 'wp_miss_analytic_m': 142.3, 'max_bank_deg': 19.7, 'flight_time_s': 749.6}
+   {'delta_deg': 30, 'kind': 'flyover', 'radius_m': 4034, 'turn_xte_max_m': 15.5, 'wp_miss_m': 3.5, 'wp_miss_analytic_m': 0.0, 'max_bank_deg': 20.1, 'flight_time_s': 751.3}
+   {'delta_deg': 60, 'kind': 'flyby', 'radius_m': 4034, 'turn_xte_max_m': 17.9, 'wp_miss_m': 640.5, 'wp_miss_analytic_m': 624.1, 'max_bank_deg': 20.1, 'flight_time_s': 746.3}
+   {'delta_deg': 60, 'kind': 'flyover', 'radius_m': 4034, 'turn_xte_max_m': 33.8, 'wp_miss_m': 3.5, 'wp_miss_analytic_m': 0.0, 'max_bank_deg': 20.1, 'flight_time_s': 759.6}
+   {'delta_deg': 90, 'kind': 'flyby', 'radius_m': 4034, 'turn_xte_max_m': 19.8, 'wp_miss_m': 1682.9, 'wp_miss_analytic_m': 1671.1, 'max_bank_deg': 20.1, 'flight_time_s': 735.5}
+   {'delta_deg': 90, 'kind': 'flyover', 'radius_m': 4034, 'turn_xte_max_m': 21.2, 'wp_miss_m': 3.5, 'wp_miss_analytic_m': 0.0, 'max_bank_deg': 20.1, 'flight_time_s': 777.2}
+   {'delta_deg': 120, 'kind': 'flyby', 'radius_m': 4034, 'turn_xte_max_m': 20.1, 'wp_miss_m': 4041.7, 'wp_miss_analytic_m': 4034.4, 'max_bank_deg': 20.1, 'flight_time_s': 703.9}
+   {'delta_deg': 120, 'kind': 'flyover', 'radius_m': 4034, 'turn_xte_max_m': 21.2, 'wp_miss_m': 3.5, 'wp_miss_analytic_m': 0.0, 'max_bank_deg': 20.1, 'flight_time_s': 803.9}
+=== experiment 3: Multi-turn route (mixed fly-by / fly-over): L1 vs PD+FF vs PD without preview.
+   {'guidance': 'PD+FF', 't_capture_s': 66.2, 'max_abs_xte_m': 20.9, 'rms_xte_m': 6.2, 'max_bank_deg': 20.1}
+   {'guidance': 'PD+FF (no preview)', 't_capture_s': 66.2, 'max_abs_xte_m': 69.6, 'rms_xte_m': 21.8, 'max_bank_deg': 23.7}
+   {'guidance': 'L1', 't_capture_s': 20.8, 'max_abs_xte_m': 26.0, 'rms_xte_m': 5.9, 'max_bank_deg': 21.0}
+=== experiment 4: Effect of airspeed, design bank and guidance bandwidth on a 90 deg fly-by.
+   {'sweep': 'airspeed', 'value': 80, 'radius_m': 1793, 'turn_xte_max_m': 18.4, 'max_bank_deg': 20.2}
+   {'sweep': 'airspeed', 'value': 120, 'radius_m': 4034, 'turn_xte_max_m': 19.8, 'max_bank_deg': 20.1}
+   {'sweep': 'airspeed', 'value': 160, 'radius_m': 7172, 'turn_xte_max_m': 20.7, 'max_bank_deg': 20.1}
+   {'sweep': 'airspeed', 'value': 200, 'radius_m': 11207, 'turn_xte_max_m': 19.5, 'max_bank_deg': 20.1}
+   {'sweep': 'design_bank_deg', 'value': 10, 'radius_m': 8328, 'turn_xte_max_m': 17.1, 'max_bank_deg': 10.1}
+   {'sweep': 'design_bank_deg', 'value': 15, 'radius_m': 5480, 'turn_xte_max_m': 20.8, 'max_bank_deg': 15.1}
+   {'sweep': 'design_bank_deg', 'value': 20, 'radius_m': 4034, 'turn_xte_max_m': 19.8, 'max_bank_deg': 20.1}
+   {'sweep': 'design_bank_deg', 'value': 24, 'radius_m': 3298, 'turn_xte_max_m': 15.2, 'max_bank_deg': 24.1}
+   {'sweep': 'omega_n', 'value': 0.02, 't_capture_s': 200.0, 'overshoot_m': 1.0, 'max_bank_deg': 2.1}
+   {'sweep': 'omega_n', 'value': 0.04, 't_capture_s': 99.6, 'overshoot_m': 0.5, 'max_bank_deg': 7.7}
+   {'sweep': 'omega_n', 'value': 0.06, 't_capture_s': 66.9, 'overshoot_m': 0.2, 'max_bank_deg': 15.7}
+   {'sweep': 'omega_n', 'value': 0.1, 't_capture_s': 43.1, 'overshoot_m': 0.0, 'max_bank_deg': 24.7}
+   {'sweep': 'omega_n', 'value': 0.15, 't_capture_s': 26.9, 'overshoot_m': 84.1, 'max_bank_deg': 25.0}
+=== experiment 5: Constant crosswind (wind blows toward East) on a 90 deg fly-by route.
+   {'guidance': 'PD+FF', 'wind_ms': 0, 'wind_kt': 0, 'max_abs_xte_m': 19.8, 'max_xte_nm': 0.011, 'max_bank_deg': 20.1}
+   {'guidance': 'L1', 'wind_ms': 0, 'wind_kt': 0, 'max_abs_xte_m': 25.6, 'max_xte_nm': 0.014, 'max_bank_deg': 21.0}
+   {'guidance': 'PD+FF', 'wind_ms': 10, 'wind_kt': 19, 'max_abs_xte_m': 70.7, 'max_xte_nm': 0.038, 'max_bank_deg': 23.2}
+   {'guidance': 'L1', 'wind_ms': 10, 'wind_kt': 19, 'max_abs_xte_m': 40.4, 'max_xte_nm': 0.022, 'max_bank_deg': 22.9}
+   {'guidance': 'PD+FF', 'wind_ms': 20, 'wind_kt': 39, 'max_abs_xte_m': 144.9, 'max_xte_nm': 0.078, 'max_bank_deg': 25.0}
+   {'guidance': 'L1', 'wind_ms': 20, 'wind_kt': 39, 'max_abs_xte_m': 95.8, 'max_xte_nm': 0.052, 'max_bank_deg': 25.0}
+   {'guidance': 'PD+FF', 'wind_ms': 30, 'wind_kt': 58, 'max_abs_xte_m': 293.0, 'max_xte_nm': 0.158, 'max_bank_deg': 25.0}
+   {'guidance': 'L1', 'wind_ms': 30, 'wind_kt': 58, 'max_abs_xte_m': 237.7, 'max_xte_nm': 0.128, 'max_bank_deg': 25.0}
+Done -> /home/claude/rnav_project/results
