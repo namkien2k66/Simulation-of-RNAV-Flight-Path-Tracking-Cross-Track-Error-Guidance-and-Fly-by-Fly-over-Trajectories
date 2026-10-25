@@ -1,0 +1,4 @@
+guidance,t_capture_s,max_abs_xte_m,rms_xte_m,max_bank_deg
+PD+FF,66.2,20.9,6.2,20.1
+PD+FF (no preview),66.2,69.6,21.8,23.7
+L1,20.8,26.0,5.9,21.0
